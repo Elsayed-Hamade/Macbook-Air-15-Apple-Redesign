@@ -32,7 +32,7 @@ switchContainer.addEventListener("click", (e) => {
   });
 
   productsContainer.forEach((product) => {
-    product.classList.add("inactive");
+    product.style.display = "none";
   });
 
   const addBorder = (target) => {
@@ -40,10 +40,10 @@ switchContainer.addEventListener("click", (e) => {
   };
 
   if (e.target.classList.contains("desktop")) {
-    desktopContainer.classList.remove("inactive");
+    desktopContainer.style.display = "flex";
     addBorder(e.target);
   } else {
-    laptopsContainer.classList.remove("inactive");
+    laptopsContainer.style.display = "flex";
     addBorder(e.target);
   }
 });
@@ -80,3 +80,64 @@ leftArrow.addEventListener("click", () => {
 });
 
 gotoSlide(0);
+
+// PopUp
+const newsBtns = document.querySelectorAll(".news-btn");
+const newsContainer = document.querySelector(".news-container");
+const closeNews = document.querySelector(".close-news");
+newsBtns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    newsContainer.classList.add("active-news");
+  });
+});
+
+closeNews.addEventListener("click", () => {
+  newsContainer.classList.remove("active-news");
+});
+
+// Smooth Scroll
+const navLists = document.querySelectorAll(".nav-list");
+
+navLists.forEach((navList) => {
+  navList.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (e.target.classList.contains("nav-link")) {
+      const id = e.target.getAttribute("href");
+      document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
+
+// Nav Fixed
+const homeSec = document.querySelector(".home");
+const nav = document.querySelector(".nav");
+const navLinks = document.querySelectorAll(".nav-ink")
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      nav.classList.add("nav-sticky");
+      nav.style.zIndex = 100;
+      navLinks.forEach(link => cl(link))
+    } else {
+      nav.classList.remove("nav-sticky");
+    }
+  });
+});
+
+observer.observe(homeSec);
+
+// Media Query
+const newsBtn = document.querySelector(".news-btn");
+const startQuery = () => {
+  const mediaQuery = matchMedia("(min-width : 800px)");
+  if (mediaQuery.matches) {
+    menu.style.display = "none";
+    close.style.display = "none";
+    darkBg.before(newsBtn);
+  }
+};
+window.addEventListener("load", () => {
+  startQuery();
+});

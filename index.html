@@ -20,17 +20,17 @@
   <body>
     <!-- Navbar -->
     <nav class="nav">
-      <img src="Assets/Logo.svg" alt="LOGO" class="logo" />
+      <i class="fa-brands fa-apple logo"></i>
       <ul class="nav-list">
         <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
         <li class="nav-item"><a href="#mac" class="nav-link">Mac</a></li>
         <li class="nav-item"><a href="#iphone" class="nav-link">iPhone</a></li>
         <li class="nav-item"><a href="#ipad" class="nav-link">iPads</a></li>
-        <a href="#" class="news-btn">News</a>
+        <a href="" class="news-btn">News</a>
         <i class="fa-solid fa-xmark close"></i>
       </ul>
       <div class="dark-bg inactive"></div>
-      <i class="fa-solid fa-bars menu"></i>
+      <i class="fa-solid fa-bars menu inactive"></i>
     </nav>
     <section class="home" id="home">
       <div class="home-container">
@@ -107,10 +107,7 @@
         </div>
       </div>
 
-      <div
-        class="products-container desktop-container inactive"
-        data-product="desktop"
-      >
+      <div class="products-container desktop-container" data-product="desktop">
         <div class="product">
           <img src="Assets/imac.png" alt="Imac" class="product-img" />
           <h1 class="product-title">iMac</h1>
@@ -147,6 +144,7 @@
       </div>
     </section>
     <section class="iphone" id="iphone">
+      <h1 class="title">iPhone</h1>
       <div class="slider-arrows">
         <i class="fa-solid fa-chevron-left left-arrow"></i>
         <i class="fa-solid fa-chevron-right right-arrow"></i>
@@ -159,14 +157,16 @@
             alt="iPhone 14 Pro"
             class="iphone-img"
           />
-          <h1 class="iphone-title">iPhone 14 Pro</h1>
-          <h5 class="subtitle">The ultimate iPhone.</h5>
-          <p class="price">From $999</p>
-          <div class="btns">
-            <a href="#" class="more">
-              Learn more <i class="fa-solid fa-chevron-right"></i>
-            </a>
-            <a href="#" class="buy">Buy</a>
+          <div class="iphone-contents">
+            <h1 class="iphone-title">iPhone 14 Pro</h1>
+            <h5 class="subtitle">The ultimate iPhone.</h5>
+            <p class="price">From $999</p>
+            <div class="btns">
+              <a href="#" class="more">
+                Learn more <i class="fa-solid fa-chevron-right"></i>
+              </a>
+              <a href="#" class="buy">Buy</a>
+            </div>
           </div>
         </div>
         <div class="iphone-product">
@@ -175,9 +175,44 @@
             alt="iPhone 13 pro"
             class="iphone-img"
           />
-          <h1 class="iphone-title">iPhone 13 Pro</h1>
-          <h5 class="subtitle">As amazing as ever.</h5>
-          <p class="price">From $599*</p>
+          <div class="iphone-contents">
+            <h1 class="iphone-title">iPhone 13 Pro</h1>
+            <h5 class="subtitle">As amazing as ever.</h5>
+            <p class="price">From $599*</p>
+            <div class="btns">
+              <a href="#" class="more">
+                Learn more <i class="fa-solid fa-chevron-right"></i>
+              </a>
+              <a href="#" class="buy">Buy</a>
+            </div>
+          </div>
+        </div>
+        <div class="iphone-product">
+          <img src="Assets/iPhoneSE.png" alt="iPhone SE" class="iphone-img" />
+          <div class="iphone-contents">
+            <h1 class="iphone-title">iPhone SE</h1>
+            <h5 class="subtitle">Serious power. Serious value.</h5>
+            <p class="price">From $429</p>
+            <div class="btns">
+              <a href="#" class="more">
+                Learn more <i class="fa-solid fa-chevron-right"></i>
+              </a>
+              <a href="#" class="buy">Buy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="ipad" id="ipad">
+      <h1 class="title">iPad</h1>
+      <div class="ipad-container">
+        <div class="ipad-product">
+          <img src="Assets/iPadPro.png" alt="iPad Pro" class="ipad-img" />
+          <h1 class="title">iPad Pro</h1>
+          <h5 class="subtitle">
+            The ultimate iPad experience with the most advanced technology.
+          </h5>
+          <p class="price">From $799</p>
           <div class="btns">
             <a href="#" class="more">
               Learn more <i class="fa-solid fa-chevron-right"></i>
@@ -185,11 +220,41 @@
             <a href="#" class="buy">Buy</a>
           </div>
         </div>
-        <div class="iphone-product">
-          <img src="Assets/iPhoneSE.png" alt="iPhone SE" class="iphone-img" />
-          <h1 class="iphone-title">iPhone SE</h1>
-          <h5 class="subtitle">Serious power. Serious value.</h5>
-          <p class="price">From $429</p>
+        <div class="ipad-product">
+          <img src="Assets/iPadAir5.png" alt="iPad Air 5" class="ipad-img" />
+          <h1 class="title">iPad Air</h1>
+          <h5 class="subtitle">
+            Serious performance in a thin and light design.
+          </h5>
+          <p class="price">From $599</p>
+          <div class="btns">
+            <a href="#" class="more">
+              Learn more <i class="fa-solid fa-chevron-right"></i>
+            </a>
+            <a href="#" class="buy">Buy</a>
+          </div>
+        </div>
+        <div class="ipad-product">
+          <img src="Assets/iPad10.png" alt="iPad 10" class="ipad-img" />
+          <h1 class="title">iPad <span>(10th generation)</span></h1>
+          <h5 class="subtitle">
+            The all‑new colorful iPad for the things you do every day.
+          </h5>
+          <p class="price">From $449</p>
+          <div class="btns">
+            <a href="#" class="more">
+              Learn more <i class="fa-solid fa-chevron-right"></i>
+            </a>
+            <a href="#" class="buy">Buy</a>
+          </div>
+        </div>
+        <div class="ipad-product">
+          <img src="Assets/iPadMini6.png" alt="iPad mini" class="ipad-img" />
+          <h1 class="title">iPad mini</h1>
+          <h5 class="subtitle">
+            The full iPad experience designed to fit in one hand.
+          </h5>
+          <p class="price">From $799</p>
           <div class="btns">
             <a href="#" class="more">
               Learn more <i class="fa-solid fa-chevron-right"></i>
@@ -199,6 +264,52 @@
         </div>
       </div>
     </section>
+    <section class="footer" id="footer">
+      <div class="sec-1">
+        <div class="logo">
+          <img src="Assets/Logo.svg" alt="Logo" class="img-logo" />
+          <h2 class="title">Apple</h2>
+        </div>
+        <a href="" class="news-btn">News</a>
+      </div>
+      <div class="sec-2">
+        <ul class="footer-list nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#mac" class="nav-link">Mac</a></li>
+          <li class="nav-item">
+            <a href="#iphone" class="nav-link">iPhone</a>
+          </li>
+          <li class="nav-item"><a href="#ipad" class="nav-link">iPads</a></li>
+        </ul>
+        <p class="copyright">
+          Copyright © 2023 Apple Inc. All rights reserved.
+        </p>
+      </div>
+    </section>
+
+    <div class="news-container">
+      <div class="news-item-container">
+        <i class="fa-solid fa-xmark close-news"></i>
+
+        <h1 class="news-title">News</h1>
+        <div class="news-item">
+          <h1>Macbook Air Launch</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+            voluptates cumque repudiandae ipsum doloribus. Quisquam non dolores
+            laboriosam voluptatibus minus?
+          </p>
+        </div>
+        <div class="news-item">
+          <h1>IOS 17 Launch</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+            voluptates cumque repudiandae ipsum doloribus. Quisquam non dolores
+            laboriosam voluptatibus minus?
+          </p>
+        </div>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

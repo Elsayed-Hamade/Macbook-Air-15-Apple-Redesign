@@ -35,7 +35,8 @@ ul {
 }
 
 .nav > .logo {
-  width: 7%;
+  font-size: 3rem;
+  margin: 0;
 }
 
 .nav-list {
@@ -102,7 +103,7 @@ ul {
   width: 100%;
   height: 100%;
   z-index: 9;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 }
@@ -228,9 +229,13 @@ ul {
   border-bottom: solid 2px #313131;
 }
 
+.desktop-container {
+  display: none;
+}
+
 .product {
   background-color: rgba(212, 212, 212, 0.2);
-  width: 90%;
+  width: 40rem;
   /* height: 40rem; */
   display: flex;
   align-items: center;
@@ -256,7 +261,13 @@ ul {
 }
 
 /* IPHONE */
+.iphone {
+  text-align: center;
+}
 
+.iphone > .title {
+  margin: 2rem 0;
+}
 .iphone-container {
   position: relative;
   background-color: rgba(212, 212, 212, 0.2);
@@ -275,10 +286,11 @@ ul {
   align-items: center;
   justify-content: center;
   position: absolute;
-  transition: transform .3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
-.left-arrow,.right-arrow {
+.left-arrow,
+.right-arrow {
   color: #0cb2bc;
   font-size: 3rem;
   position: absolute;
@@ -301,7 +313,7 @@ ul {
 }
 
 .iphone-product .iphone-img {
-  width: 60%;
+  width: 40%;
 }
 
 .iphone-title {
@@ -310,6 +322,326 @@ ul {
   color: #313131;
 }
 
-.iphone-subtitle {
+.iphone-contents > .subtitle {
   font-size: 1.7rem;
+}
+
+/* Ipad */
+.ipad {
+  text-align: center;
+  width: 90%;
+  margin: 3rem auto;
+}
+
+.ipad > .title {
+  margin-bottom: 3rem;
+}
+
+.ipad-container {
+  background-color: rgba(212, 212, 212, 0.2);
+  padding: 3rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.ipad-product .ipad-img {
+  width: 70%;
+}
+
+.ipad-product {
+  margin-bottom: 5rem;
+}
+
+.ipad-product .subtitle {
+  line-height: normal;
+}
+
+.ipad-product .price {
+  font-size: 1.5rem;
+}
+
+.ipad-product .title > span {
+  display: block;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(212, 212, 212, 0.2);
+  text-align: center;
+  padding: 3rem;
+}
+
+.footer .img-logo {
+  width: 10%;
+  margin-right: 2rem;
+}
+
+.logo .title {
+  font-weight: 500;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.footer .nav-list {
+  position: initial;
+  background: none;
+  width: initial;
+  height: initial;
+  margin-top: 3rem;
+}
+
+.footer .nav-item a {
+  color: #313131;
+}
+
+.copyright {
+  color: #313131;
+}
+
+/* News */
+.news-container {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3131314d;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  scale: 0;
+  transition: opacity, scale 0.3s ease-in-out;
+}
+
+.news-item-container {
+  width: 30rem;
+  background-color: #313131;
+  color: white;
+  padding: 3rem;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.news-title {
+  color: #0cb2bc;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.news-item {
+  background-color: white;
+  color: #313131;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+}
+
+.close-news {
+  position: absolute;
+  right: 3rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.active-news {
+  opacity: 1;
+  scale: 1;
+}
+
+.nav.nav-sticky {
+  position: fixed;
+  background-color: #313131;
+  z-index: 1;
+  width: 100%;
+  padding: 1rem 2rem;
+  transition: all 0.3s ease-in-out;
+}
+.nav.nav-sticky .nav-link{
+  color: white;
+}
+
+
+.nav.nav-sticky > .news-btn{
+  scale: .8;
+}
+
+.nav.nav-sticky > .logo {
+  font-size: 3rem;
+}
+.nav.nav-sticky > .menu,
+.nav.nav-sticky > .logo {
+  color: white;
+}
+
+
+/* Media Query */
+@media screen and (min-width: 800px) {
+  /* Nav */
+  .nav {
+    width: 100%;
+    height: 7rem;
+    margin-bottom: 1rem;
+  }
+  .nav-list {
+    position: initial;
+    background: none;
+    width: auto;
+    height: 100%;
+    flex-direction: row;
+    margin: 0 auto;
+  }
+
+  .nav-item {
+    margin-bottom: 0;
+    margin: 0 3rem;
+  }
+  .nav-item > .nav-link {
+    color: #313131;
+  }
+  .nav > .logo {
+    font-size: 5rem;
+  }
+
+  /* Home */
+  .home-container {
+    flex-direction: row;
+  }
+
+  .home-container .home-img {
+    width: 50%;
+  }
+
+  .text-content {
+    margin-bottom: 0;
+    margin-right: 5rem;
+  }
+
+  /* Mac */
+  .product .product-img {
+    width: 70%;
+  }
+
+  .products-container {
+    width: 80%;
+    flex-wrap: wrap;
+  }
+
+  /* Iphone */
+  .iphone-product {
+    flex-direction: row;
+  }
+
+  .iphone-product > .iphone-img {
+    width: 30%;
+  }
+
+  .iphone-contents {
+    margin-left: 10rem;
+  }
+
+  .iphone-title {
+    font-size: 4rem;
+  }
+
+  .iphone-contents > .subtitle {
+    font-size: 2rem;
+  }
+
+  .iphone-contents > .price {
+    font-size: 1.5rem;
+  }
+
+  /* Ipad */
+  .ipad-product .ipad-img {
+    width: 40%;
+  }
+
+  .ipad-product {
+    width: 30rem;
+    height: 37rem;
+    margin: 2rem;
+  }
+
+  /* footer */
+  .sec-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo {
+    margin-bottom: 0;
+  }
+
+  .footer-list {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* Home */
+  .new {
+    font-size: 2rem;
+  }
+
+  .title {
+    font-size: 5rem;
+  }
+
+  .subtitle {
+    font-size: 2rem;
+  }
+
+  .text-content > .price {
+    font-size: 1.5rem;
+  }
+
+  .more {
+    font-size: 1.5rem;
+  }
+
+  .more i {
+    font-size: 1.3rem;
+  }
+
+  .buy {
+    padding: 1rem 3.5rem;
+    border-radius: 1.7rem;
+  }
+
+  /* Mac */
+  .iphone-product > .iphone-img {
+    width: 20%;
+  }
+
+  .product {
+    width: 37rem;
+  }
+
+  /* Iphone */
+  .iphone-container {
+    width: 70%;
+  }
+
+  .left-arrow {
+    left: 30rem;
+  }
+
+  .right-arrow {
+    right: 30rem;
+  }
 }
